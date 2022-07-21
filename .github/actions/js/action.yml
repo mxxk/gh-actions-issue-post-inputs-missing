@@ -1,0 +1,13 @@
+name: >
+  Shows environment variables starting with `INPUT_` during `main` and `post`
+inputs:
+  required:
+    description: Required input
+    required: true
+  optional:
+    description: Optional input
+    required: false
+runs:
+  using: node16
+  main: main.js
+  post: post.js

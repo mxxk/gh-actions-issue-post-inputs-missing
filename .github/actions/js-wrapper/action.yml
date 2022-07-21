@@ -1,0 +1,16 @@
+name: JS wrapper action
+description: Passes inputs to `./.github/actions/js`
+inputs:
+  required:
+    description: Required input
+    required: true
+  optional:
+    description: Optional input
+    required: false
+runs:
+  using: composite
+  steps:
+    - uses: ./.github/actions/js
+      with:
+        required: ${{ inputs.required }}
+        optional: ${{ inputs.optional }}

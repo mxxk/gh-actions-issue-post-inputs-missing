@@ -1,0 +1,8 @@
+name: Calls `./.github/actions/js-wrapper` with inputs
+runs:
+  using: composite
+  steps:
+    - uses: ./.github/actions/js-wrapper
+      with:
+        required: Required input from action
+        optional: Optional input from action
